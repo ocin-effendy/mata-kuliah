@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="652.0" style="-fx-background-color: #e9e9e9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.list">
+   <left>
+      <AnchorPane prefHeight="392.0" prefWidth="109.0" style="-fx-background-color: #f44a55;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="107.0" layoutY="2.0" prefHeight="392.0" prefWidth="10.0" style="-fx-background-color: #ef7880;" />
+            <Button fx:id="delete" layoutX="24.0" layoutY="140.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #c52a35;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Home" layoutX="24.0" layoutY="186.0" mnemonicParsing="false" onAction="#home" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #c52a35;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="reset" layoutX="24.0" layoutY="230.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #c52a35;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="403.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listtransaksi" layoutX="24.0" layoutY="39.0" prefHeight="250.0" prefWidth="478.0" />
+            <Label layoutX="43.0" layoutY="318.0" text="Nomor HP">
+               <font>
+                  <Font name="Assistant SemiBold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nohp" layoutX="112.0" layoutY="316.0" prefHeight="25.0" prefWidth="330.0" />
+            <Label layoutX="43.0" layoutY="357.0" text="Nominal ">
+               <font>
+                  <Font name="Assistant SemiBold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nominal" layoutX="112.0" layoutY="355.0" prefHeight="25.0" prefWidth="331.0" />
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="486.0" layoutY="-2.0">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="displayname" layoutX="465.0" layoutY="6.0" onMousePressed="#initialize" textAlignment="RIGHT" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

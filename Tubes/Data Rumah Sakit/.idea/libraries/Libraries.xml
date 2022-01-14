@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Libraries">
+    <CLASSES>
+      <root url="file://$USER_HOME$/SendEmailJFX-main/Desktop/Github/Libraries" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/SendEmailJFX-main/Desktop/Github/Libraries" recursive="false" />
+  </library>
+</component>

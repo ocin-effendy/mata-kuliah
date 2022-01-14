@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="652.0" style="-fx-background-color: #e9e9e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.IsiPulsa">
+   <left>
+      <AnchorPane prefHeight="392.0" prefWidth="109.0" style="-fx-background-color: #f44a55;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="107.0" layoutY="2.0" prefHeight="392.0" prefWidth="10.0" style="-fx-background-color: #ef7880;" />
+            <Button fx:id="transaksi" layoutX="24.0" layoutY="138.0" mnemonicParsing="false" onAction="#transaksi" style="-fx-background-color: #c52a35;" text="Transaksi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Home" layoutX="24.0" layoutY="186.0" mnemonicParsing="false" onAction="#home" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #c52a35;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="403.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="316.0" fitWidth="134.0" layoutX="14.0" layoutY="49.0">
+               <image>
+                  <Image url="@../image/operator.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="154.0" layoutY="49.0" prefHeight="348.0" prefWidth="382.0" style="-fx-background-color: #cacaca;" />
+            <Label fx:id="Smartfren" layoutX="29.0" layoutY="49.0" onMousePressed="#smartfren" prefHeight="49.0" prefWidth="119.0" />
+            <Label fx:id="indosat" layoutX="23.0" layoutY="115.0" onMousePressed="#indosatr" prefHeight="47.0" prefWidth="127.0" />
+            <Label layoutX="25.0" layoutY="179.0" onMousePressed="#xl" prefHeight="52.0" prefWidth="127.0" fx:id="xl" />
+            <Label fx:id="indosat11" layoutX="25.0" layoutY="246.0" prefHeight="52.0" prefWidth="122.0" />
+            <Label fx:id="tri" layoutX="28.0" layoutY="246.0" onMousePressed="#tri" prefHeight="52.0" prefWidth="122.0" />
+            <Label fx:id="telkomsel" layoutX="28.0" layoutY="313.0" onMousePressed="#telkomsel" prefHeight="52.0" prefWidth="122.0" />
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="489.0" layoutY="7.0">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="displayname" layoutX="468.0" layoutY="15.0" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Register">
+   <left>
+      <AnchorPane prefHeight="392.0" prefWidth="346.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="392.0" fitWidth="350.0">
+               <image>
+                  <Image url="@../image/bg_login.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="wrongLogin" layoutX="178.0" layoutY="88.0" prefHeight="17.0" prefWidth="61.0" textFill="RED" />
+            <Label fx:id="backlogin" layoutX="93.0" layoutY="363.0" onMousePressed="#backlogin" text="Sudah punya akun!">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label layoutX="18.0" layoutY="96.0" text="Nama " />
+            <Label layoutX="16.0" layoutY="180.0" text="Username" />
+            <Label layoutX="18.0" layoutY="221.0" text="Password" />
+            <PasswordField fx:id="password" layoutX="17.0" layoutY="240.0" prefHeight="25.0" prefWidth="199.0" promptText="password" />
+            <Label layoutX="14.0" layoutY="265.0" text=" Confirm password" />
+            <PasswordField fx:id="Cpassword" layoutX="17.0" layoutY="282.0" prefHeight="25.0" prefWidth="199.0" promptText="confirm password" />
+            <TextField fx:id="name" layoutX="17.0" layoutY="113.0" prefHeight="25.0" prefWidth="198.0" promptText="name" />
+            <TextField fx:id="username" layoutX="16.0" layoutY="196.0" prefHeight="25.0" prefWidth="198.0" promptText="username" />
+            <ImageView fitHeight="21.0" fitWidth="100.0" layoutX="85.0" layoutY="327.0">
+               <image>
+                  <Image url="@../image/register.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="108.0" layoutX="88.0" layoutY="35.0">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="register" layoutX="85.0" layoutY="325.0" onMousePressed="#register" prefHeight="25.0" prefWidth="99.0" />
+            <Label layoutX="16.0" layoutY="138.0" text="Email" />
+            <TextField fx:id="email" layoutX="16.0" layoutY="155.0" prefHeight="25.0" prefWidth="198.0" promptText="email" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

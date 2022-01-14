@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="652.0" style="-fx-background-color: #e9e9e9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.telkomsel">
+   <left>
+      <AnchorPane prefHeight="392.0" prefWidth="109.0" style="-fx-background-color: #f44a55;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="transaksi" layoutX="21.0" layoutY="138.0" mnemonicParsing="false" onMousePressed="#Transaksi" style="-fx-background-color: #c52a35;" text="Transaksi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <AnchorPane layoutX="107.0" layoutY="2.0" prefHeight="392.0" prefWidth="10.0" style="-fx-background-color: #ef7880;" />
+            <Button fx:id="home" layoutX="20.0" layoutY="206.0" mnemonicParsing="false" onMousePressed="#home" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #c52a35;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="403.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="316.0" fitWidth="134.0" layoutX="14.0" layoutY="49.0">
+               <image>
+                  <Image url="@../image/operator.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="myAnchorPane" layoutX="154.0" layoutY="49.0" prefHeight="348.0" prefWidth="382.0" style="-fx-background-color: #cacaca;">
+               <children>
+                  <Label layoutX="25.0" layoutY="20.0" prefHeight="25.0" prefWidth="173.0" text="Masukkan Nomor HP" textFill="#403f3f">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nomorhp" layoutX="25.0" layoutY="45.0" prefHeight="27.0" prefWidth="190.0" />
+                  <Label layoutX="23.0" layoutY="149.0" prefHeight="25.0" prefWidth="173.0" text=" Pilih Nominal Pulsa" textFill="#403f3f">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ToggleButton fx:id="limaribu" layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="5000">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="buttons" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="sepuluhribu" layoutX="109.0" layoutY="182.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="10.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="limabelasribu" layoutX="196.0" layoutY="182.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="15.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="duapuluhribu" layoutX="280.0" layoutY="182.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="20.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="duapuluhlimaribu" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="25.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="limapuluhribu" layoutX="109.0" layoutY="245.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="50.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="seratusribu" layoutX="196.0" layoutY="245.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="100.000" toggleGroup="$buttons" />
+                  <ToggleButton fx:id="duaratusribu" layoutX="280.0" layoutY="245.0" mnemonicParsing="false" onMousePressed="#togglebutton" prefHeight="41.0" prefWidth="72.0" text="200.000" toggleGroup="$buttons" />
+                  <Label layoutX="25.0" layoutY="72.0" prefHeight="25.0" prefWidth="173.0" text="Masukkan Email" textFill="#403f3f">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" layoutX="25.0" layoutY="97.0" prefHeight="27.0" prefWidth="190.0" />
+               </children></AnchorPane>
+            <ImageView fx:id="coba" fitHeight="33.0" fitWidth="33.0" layoutX="489.0" layoutY="8.0">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="displayname" layoutX="468.0" layoutY="16.0" textAlignment="RIGHT" />
+            <Rectangle fx:id="tanda" arcHeight="5.0" arcWidth="5.0" fill="#8e0000" height="50.0" layoutX="14.0" layoutY="315.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="13.0" />
+            <ImageView fx:id="tandaImage" fitHeight="246.0" fitWidth="133.0" layoutX="15.0" layoutY="49.0" onMousePressed="#warning" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

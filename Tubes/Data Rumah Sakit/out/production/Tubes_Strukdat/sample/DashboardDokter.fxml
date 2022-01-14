@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="707.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboarDokterController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="159.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Circle fill="DODGERBLUE" layoutX="80.0" layoutY="55.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #cee7f2;" />
+            <Label fx:id="nameAdmin" layoutX="32.0" layoutY="107.0" prefHeight="18.0" prefWidth="96.0" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="128.0" text="Admin">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="21.0" layoutY="156.0">
+               <image>
+                  <Image url="@../image/LogoDashboard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="156.0" text="Dashboard">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="21.0" layoutY="200.0">
+               <image>
+                  <Image url="@../image/profil.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="200.0" text="Profil">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="21.0" layoutY="247.0">
+               <image>
+                  <Image url="@../image/settings.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="247.0" text="Settings">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="21.0" layoutY="322.0">
+               <image>
+                  <Image url="@../image/exit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="322.0" onMouseClicked="#buttonLogout" text="Logout">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="399.0" layoutX="259.0" layoutY="1.0" startX="-100.0" startY="-13.0" stroke="#ebf2ec" strokeWidth="2.0" />
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="49.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Line endX="449.0" layoutX="259.0" layoutY="50.0" startX="-100.0" stroke="#ebf2ec" strokeWidth="2.0" />
+      <Circle fill="#e8e3e3" layoutX="659.0" layoutY="28.0" radius="14.0" stroke="#cfcfcf02" strokeType="INSIDE" />
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="649.0" layoutY="18.0" preserveRatio="true">
+         <image>
+            <Image url="@../image/settings.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#e8e3e3" layoutX="613.0" layoutY="29.0" radius="14.0" stroke="#cfcfcf02" strokeType="INSIDE" />
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="603.0" layoutY="19.0" opacity="0.57" preserveRatio="true">
+         <image>
+            <Image url="@../image/comment.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="coba" layoutX="176.0" layoutY="14.0" prefHeight="28.0" prefWidth="150.0" text="Dashboard">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Search" layoutX="335.0" layoutY="15.0" prefHeight="26.0" prefWidth="128.0" promptText="Search here" style="-fx-background-color: #ededed; -fx-border-color: #ffffff;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed" height="26.0" layoutX="463.0" layoutY="15.0" stroke="#ededed73" strokeType="INSIDE" width="35.0" />
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="470.0" layoutY="18.0" preserveRatio="true">
+         <image>
+            <Image url="@../image/searchIcon.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9d2" height="53.0" layoutX="231.0" layoutY="64.0" stroke="#ededed73" strokeType="INSIDE" width="137.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" layoutX="231.0" layoutY="64.0" stroke="#ffffff73" strokeType="INSIDE" width="133.0" />
+      <Line endX="-100.0" endY="-44.0" layoutX="331.0" layoutY="110.0" startX="-100.0" stroke="#ededed" strokeWidth="2.0" />
+      <Line endX="-82.0" endY="-43.0" layoutX="314.0" layoutY="108.0" startX="50.0" startY="-44.0" stroke="#ededed" strokeWidth="2.0" />
+      <Label fx:id="dataPasien" layoutX="271.0" layoutY="67.0" onMouseClicked="#buttonDataPasien" prefHeight="26.0" prefWidth="96.0" text="Data Pasien">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#70bcff" height="30.0" layoutX="235.0" layoutY="71.0" stroke="#ffffff73" strokeType="INSIDE" width="32.0" />
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="237.0" layoutY="73.0">
+         <image>
+            <Image url="@../image/patient.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9d2" height="53.0" layoutX="492.0" layoutY="63.0" stroke="#ededed73" strokeType="INSIDE" width="137.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" layoutX="492.0" layoutY="63.0" stroke="#ffffff73" strokeType="INSIDE" width="133.0" />
+      <Line endX="-100.0" endY="-44.0" layoutX="592.0" layoutY="109.0" startX="-100.0" stroke="#ededed" strokeWidth="2.0" />
+      <Line endX="-82.0" endY="-43.0" layoutX="575.0" layoutY="107.0" startX="50.0" startY="-44.0" stroke="#ededed" strokeWidth="2.0" />
+      <Label layoutX="532.0" layoutY="66.0" prefHeight="26.0" prefWidth="96.0" text="Data Dokter">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7be893" height="30.0" layoutX="496.0" layoutY="70.0" stroke="#ffffff73" strokeType="INSIDE" width="32.0" />
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="498.0" layoutY="72.0">
+         <image>
+            <Image url="@../image/doctor.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="listviewDokter" layoutX="207.0" layoutY="159.0" prefHeight="225.0" prefWidth="438.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab18" height="47.0" layoutX="491.0" layoutY="64.0" stroke="WHITE" strokeType="INSIDE" width="137.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="26.0" layoutX="463.0" layoutY="16.0" onMouseClicked="#buttonSearch" stroke="#ededed73" strokeType="INSIDE" width="35.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="scenePane" prefHeight="393.0" prefWidth="652.0" style="-fx-background-color: #e9e9e9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Pilihanmenu">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="118.0" layoutX="83.0" layoutY="63.0">
+         <image>
+            <Image url="@../image/isi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="118.0" layoutX="462.0" layoutY="63.0">
+         <image>
+            <Image url="@../image/i.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="652.0" layoutY="327.0">
+         <image>
+            <Image url="@../image/lengkung.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exit" fitHeight="34.0" fitWidth="35.0" layoutX="21.0" layoutY="347.0" onMousePressed="#exit">
+         <image>
+            <Image url="@../image/exit.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="isi_pulsa" layoutX="83.0" layoutY="223.0" onMousePressed="#isipulsa" prefHeight="42.0" prefWidth="118.0" />
+      <Label fx:id="about" layoutX="462.0" layoutY="223.0" onMousePressed="#about" prefHeight="42.0" prefWidth="118.0" />
+      <ImageView fitHeight="200.0" fitWidth="118.0" layoutX="267.0" layoutY="63.0">
+         <image>
+            <Image url="@../image/list.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="listtransaksi" layoutX="267.0" layoutY="223.0" onMousePressed="#list" prefHeight="42.0" prefWidth="118.0" />
+   </children>
+</AnchorPane>

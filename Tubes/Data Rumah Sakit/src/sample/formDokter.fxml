@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="375.0" prefWidth="341.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.formDokterController">
+   <children>
+      <Label fx:id="getDokter" layoutX="85.0" layoutY="31.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="99.0" text="Jam Kerja Praktek Klinik">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="126.0" text="Pagi   :">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="jamPagi" layoutX="19.0" layoutY="152.0" />
+      <Label layoutX="19.0" layoutY="175.0" text="Siang  :">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="jamSiang" layoutX="19.0" layoutY="201.0" />
+      <Label layoutX="19.0" layoutY="231.0" text="Malam :">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="jamMalam" layoutX="19.0" layoutY="257.0" />
+      <Label layoutX="19.0" layoutY="301.0" text="Alamat Praktek Dokter">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alamat" layoutX="19.0" layoutY="329.0" />
+   </children>
+</AnchorPane>
