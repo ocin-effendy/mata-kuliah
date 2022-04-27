@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../watchlist.css">
+    <title>Watchlist</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-input">
+            <form action="inputData" class="inputData">
+                <div class="input">
+                    <label  for="nameMovie">Input Movie :</label>
+                    <input id="nameMovie" type="text" >
+
+                </div>
+                <div class="input">
+                    <label for="ratingMovie">Input Rating :</label>
+                    <input id="ratingMovie" type="text">
+                </div>
+            </form>
+            <button onclick="addMovie()">Add Movie</button>
+            <input id="search" type="text" placeholder="Search" />
+        </div>
+
+        <div class="container-table">
+            <Table>
+                <thead>
+                    <tr>
+                        <th class="sort" onclick="sortMovie('nameMovie')">Movie Title</th>
+                        <th class="sort" onclick="sortMovie('ratingMovie')">Movie Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="content"></tbody>
+            </Table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../watchlist.js"></script>
+    
+</body>
+</html>
