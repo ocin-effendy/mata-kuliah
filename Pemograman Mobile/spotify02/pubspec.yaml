@@ -36,6 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.1
   shared_preferences: ^2.0.13
+  blur: ^3.1.0
+  mobx: ^2.0.7
+  flutter_mobx: ^2.0.5
+  mobx_codegen: ^2.0.6
+  build_runner: ^2.1.10
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:
@@ -64,19 +70,17 @@ flutter:
   - assets/Olivia.jpg
   - assets/Billie.jpg
   - assets/Malone.jpg
-  - assets/Zein.jpg
+  - assets/Chase Atlantic.jpg
   - assets/Lipa.jpg
   - assets/xxx.jpg
   - assets/21Savage.jpg
   - assets/Bazzi.jpg
-  - assets/Kendrick.jpg
-  - assets/Lauv.jpg
   - assets/Trafis.jpg
   - assets/Drake.jpeg
-  - assets/EdSheeran.jpeg
   - assets/Eminem.jpeg
   - assets/TheWeekend.jpeg
-  - assets/Brian.png
+  - assets/YNW Melly.png
+  - assets/Glass animals.png
   - assets/recent1.jpeg
   - assets/recent2.jpeg
   - assets/recent3.jpeg
@@ -85,6 +89,14 @@ flutter:
   - assets/mfy2.jpeg
   - assets/mfy3.jpeg
   - assets/spotify_logo.png
+  - assets/Blinding Lights.mp3
+  - assets/Moonlight.mp3
+  - assets/Bank Account.mp3
+  - assets/Butterfly.mp3
+  - assets/Congratulations.mp3
+  - assets/Heat Waves.mp3
+  - assets/Suicidal Remix.mp3
+  - assets/SWIM.mp3
   - data/data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

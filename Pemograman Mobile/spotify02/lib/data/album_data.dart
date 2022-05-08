@@ -37,40 +37,43 @@ class AlbumData {
       "linkImage": "assets/Olivia.jpg",
     },{
       "id": 8,
-      "song": "Humble",
-      "nameArtist": "Kendrick Lamar",
-      "linkImage": "assets/Kendrick.jpg",
-    },{
-      "id": 9,
-      "song": "I'm so tired",
-      "nameArtist": "Lauv",
-      "linkImage": "assets/Lauv.jpg",
-    },{
-      "id": 10,
       "song": "Stan",
       "nameArtist": "Eminem",
       "linkImage": "assets/Eminem.jpeg",
     },{
-      "id": 11,
+      "id": 9,
       "song": "Fair Trade",
       "nameArtist": "Drake",
       "linkImage": "assets/Drake.jpeg",
     },{
-      "id": 12,
+      "id": 10,
       "song": "Why",
       "nameArtist": "Bazzy",
       "linkImage": "assets/Bazzi.jpg",
-    },{
+    },
+{
+      "id": 11,
+      "song": "SWIM",
+      "nameArtist": "Chase Atlantic",
+      "linkImage": "assets/Chase Atlantic.jpg",
+    },
+{
+      "id": 11,
+      "song": "Suicidal Remix",
+      "nameArtist": "YNW Melly",
+      "linkImage": "assets/YNW Melly.png",
+    },
+{
+      "id": 12,
+      "song": "Heat Waves",
+      "nameArtist": "Glass animals",
+      "linkImage": "assets/Glass animals.png",
+    },
+		{
       "id": 13,
-      "song": "History",
-      "nameArtist": "Rich Brian",
-      "linkImage": "assets/Brian.png",
-    },{
-      "id": 14,
-      "song": "Dusk Till Dawn",
-      "nameArtist": "Zein Malik",
-      "linkImage": "assets/Zein.jpg",
-    }
-
+      "song": "Why",
+      "nameArtist": "Bazzy",
+      "linkImage": "assets/Bazzi.jpg",
+    },
   ];
 }

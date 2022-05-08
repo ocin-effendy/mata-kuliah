@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:spotify02/data/album_data.dart';
+import 'package:spotify02/pages/musicplay_page.dart';
+import 'package:spotify02/widget/musicplay.dart';
 
 class CardMusic extends StatefulWidget{
-  const CardMusic({Key? key, required this.song, required this.nameArtist, required this.linkImage}) : super(key: key);
+  CardMusic({Key? key, required this.song, required this.nameArtist, required this.linkImage}) : super(key: key);
 	final String song;
 	final String nameArtist;
 	final String linkImage;
-
   @override
   State<CardMusic> createState() => _CardMusicState();
 }
@@ -13,21 +17,30 @@ class CardMusic extends StatefulWidget{
 class _CardMusicState extends State<CardMusic> {
 	bool cardCheck = false;
 	bool likeCheck = false;
-	void toggleCardCheck() {
-		setState(() {
-			cardCheck = !cardCheck;
-		});
-	}
 
 	void toggleLikeCheck() {
 		setState(() {
 			likeCheck = !likeCheck;
 		});
 	}
+
+	void playMusic() async{
+		final pref = await SharedPreferences.getInstance();
+		pref.setString('song', widget.song);
+	}
+
 	@override
 	Widget build(BuildContext context){
 		return  GestureDetector(
-			onTap: toggleCardCheck,
+			onTap: (){
+				passSong.setSong(widget.song);
+				passNameArtist.setNameArtist(widget.nameArtist);
+				passLinkImage.setLinkImage(widget.linkImage);
+				statusMusic.musicPlay();
+				playMusic();
+				cache.play(passSong.value+'.mp3');
+			},
+
 		  child: Container(
 		  	decoration: BoxDecoration(
 					color: Colors.white.withOpacity(0.02),
@@ -45,8 +58,10 @@ class _CardMusicState extends State<CardMusic> {
 						width: 50,
 		  	  	height: 50,
 						child: Align(
-							child: Icon(cardCheck ? Icons.pause : Icons.play_arrow,
+							child: Observer(
+							  builder: (context) => Icon(widget.song == passSong.value && statusMusic.value ? Icons.pause : Icons.play_arrow,
 		  					color: Colors.white,
+							  ),
 							),
 						),
 					),
@@ -67,7 +82,7 @@ class _CardMusicState extends State<CardMusic> {
 									color: likeCheck ? Colors.teal : Colors.white,
 									icon: likeCheck ? const Icon(Icons.favorite) : const Icon(Icons.favorite_outline),
 								),
-	  					const Icon(Icons.more_vert, color: Colors.white,)
+		  					const Icon(Icons.more_vert, color: Colors.white,),
 			  			],
 		  			),
 					)

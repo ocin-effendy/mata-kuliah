@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:spotify02/mobx/passsong.dart';
+import 'package:spotify02/mobx/passnameartist.dart';
+import 'package:spotify02/mobx/passlinkimage.dart';
 import 'package:spotify02/views/home.dart';
 import 'package:spotify02/views/library.dart';
 import 'package:spotify02/views/profile.dart';
 import 'package:spotify02/views/search.dart';
 
 
+
 class Tabbar extends StatefulWidget{
-  const Tabbar({Key? key, required this.name}) : super(key: key);
-	final String name;
+  final String name;
+	const Tabbar({Key? key, required this.name}) : super(key: key);
   @override
   State<Tabbar> createState() => _TabbarState();
 }
@@ -18,33 +22,37 @@ class _TabbarState extends State<Tabbar> {
 	@override
 	Widget build(BuildContext context){
 		return Scaffold(
-			bottomNavigationBar: BottomNavigationBar(
-				currentIndex: _selectedTab,
-				onTap: (index) {
-					setState(() {
-						_selectedTab = index;
-					});
-				},
+			bottomNavigationBar: Container(
+				decoration: const BoxDecoration(
+					border: Border(top: BorderSide(color: Colors.grey, width: 0.5)),
+				),
+			  child: BottomNavigationBar(
+			    currentIndex: _selectedTab,
+			    onTap: (index) {
+			  		setState(() {
+			  			_selectedTab = index;
+		  		});
+		  	},
 
-				 items: const  [
-					 BottomNavigationBarItem(
-						icon: Icon(Icons.home),
-						label: 'Home'
-					),
-						BottomNavigationBarItem(
-						icon: Icon(Icons.search_outlined),
-						label: 'Search'
-					),
-						BottomNavigationBarItem(
-						icon: Icon(Icons.library_music),
-						label: 'Library'
-					),
-						BottomNavigationBarItem(
-						icon: Icon(Icons.person),
-						label: 'Profile'
-					),
-					
-				],
+			    items: const  [
+			  		BottomNavigationBarItem(
+		  			icon: Icon(Icons.home),
+		  			label: 'Home'
+		  		),
+			  		BottomNavigationBarItem(
+			  			icon: Icon(Icons.search_outlined),
+			  			label: 'Search'
+			    	),
+	  			BottomNavigationBarItem(
+		  			icon: Icon(Icons.library_music),
+			  			label: 'Library'
+			    	),
+		  		BottomNavigationBarItem(
+			    		icon: Icon(Icons.person),
+			    		label: 'Profile'
+			    	),
+			  	],
+			   ),
 			),
 			body: Stack(
 				children: [

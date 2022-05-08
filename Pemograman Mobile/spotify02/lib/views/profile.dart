@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:spotify02/pages/login_page.dart';
+import 'package:spotify02/widget/musicplay.dart';
 
 class ProfilePage extends StatefulWidget{
 	
@@ -23,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
 					Container(
 						width: MediaQuery.of(context).size.width,
 						decoration: const BoxDecoration(
-							color: Colors.teal
+							color: Colors.black
 						),
 					),
 					Align(
@@ -44,7 +45,8 @@ class _ProfilePageState extends State<ProfilePage> {
 					  		)
 					  	)
 					  ),
-					)
+					),
+					MusicPlay(),
 				],
 			),
 		);

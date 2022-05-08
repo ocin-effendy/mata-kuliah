@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:spotify02/data/album_data.dart';
 import 'package:spotify02/widget/cardmusic.dart';
+import 'package:spotify02/widget/musicplay.dart';
 
 class Album extends StatefulWidget{
   const Album({Key? key, required this.name, required this.linkImage}) : super(key: key);
@@ -162,13 +164,16 @@ class _AlbumState extends State<Album> {
 												  	),
 												  ),
 												),
-												ListView.builder(
-													physics: const NeverScrollableScrollPhysics(),
-													shrinkWrap: true,
-													itemCount: albumData.length,
-													itemBuilder: (BuildContext context, int index){
-														return CardMusic(song: albumData[index]['song'], nameArtist: albumData[index]['nameArtist'], linkImage: albumData[index]['linkImage']);
-													},
+												Observer(
+												  builder: (context) => ListView.builder(
+												  	physics: const NeverScrollableScrollPhysics(),
+												  	shrinkWrap: true,
+												  	itemCount: albumData.length,
+												  	itemBuilder: (BuildContext context, int index){
+															return CardMusic(song: albumData[index]['song'], nameArtist: albumData[index]['nameArtist'], linkImage: albumData[index]['linkImage']);
+
+												  	},
+												  ),
 												),
 											],
 										),
@@ -262,7 +267,8 @@ class _AlbumState extends State<Album> {
 								),
 							),
 						),
-					)
+					),
+					MusicPlay(),
 				],
 			),
 		);

@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify02/widget/cardartist.dart';
 import 'package:spotify02/widget/cardlist.dart';
 import 'package:spotify02/widget/mfy.dart';
+import 'package:spotify02/widget/musicplay.dart';
 import 'package:spotify02/widget/recentplayed.dart';
+
 
 class HomePage extends StatelessWidget{
   const HomePage({Key? key, required this.name}) : super(key: key);
@@ -104,7 +106,6 @@ class HomePage extends StatelessWidget{
 																	CardArtist(name: 'Xxxtantion', linkImage: 'assets/xxx.jpg'),
 																	CardArtist(name: 'DuaLipa', linkImage: 'assets/Lipa.jpg'),
 																	CardArtist(name: 'Post Malone', linkImage: 'assets/Malone.jpg'),
-																	CardArtist(name: 'Zein Malik', linkImage: 'assets/Zein.jpg'),
 																],
 															),
 														),
@@ -174,7 +175,6 @@ class HomePage extends StatelessWidget{
 																	RecentPlayed(name: 'Top Rap 2022', linkImage: 'assets/recent3.jpeg'),
 																	RecentPlayed(name: 'Top Hits 2021', linkImage: 'assets/recent1.jpeg'),
 																	RecentPlayed(name: 'Top Indonesian 2022', linkImage: 'assets/recent4.jpeg'),
-																	
 																],
 															),
 														),
@@ -182,12 +182,12 @@ class HomePage extends StatelessWidget{
 												],
 											),
 										),
-	
 									],
 								),
 							),
 						),
-					)
+					),
+					MusicPlay(),
 				],
 			),
 		);

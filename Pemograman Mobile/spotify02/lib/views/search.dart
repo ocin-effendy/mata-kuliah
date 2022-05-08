@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify02/widget/musicplay.dart';
 
 class SearchPage extends StatelessWidget{
 	
@@ -12,7 +13,8 @@ class SearchPage extends StatelessWidget{
 							color: Colors.blue
 						),
 						child: Text('Search Page'),
-					)
+					),
+					MusicPlay(),
 				],
 			),
 		);
