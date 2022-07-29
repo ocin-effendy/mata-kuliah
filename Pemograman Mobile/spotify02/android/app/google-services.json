@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "91043379834",
+    "project_id": "spotify-praktikum",
+    "storage_bucket": "spotify-praktikum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91043379834:android:c5136d8887b836a20d99c3",
+        "android_client_info": {
+          "package_name": "com.example.spotify02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91043379834-p1prmch23qf7m0kec90j1i3ps46rupu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd-7yZ62djwRvRBedOXkknuOkNXnUdPwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91043379834-p1prmch23qf7m0kec90j1i3ps46rupu9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,18 +1,24 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:spotify02/api_service.dart';
 import 'package:spotify02/data/album_data.dart';
 import 'package:spotify02/mobx/passlinkimage.dart';
 import 'package:spotify02/mobx/passnameartist.dart';
 import 'package:spotify02/mobx/passsong.dart';
 import 'package:spotify02/mobx/statusmusic.dart';
+import 'package:spotify02/models/song_model.dart';
 import 'package:spotify02/pages/musicplay_page.dart';
+import 'package:blur/blur.dart';
+import 'package:spotify02/provider/listsongnotifier.dart';
 
 final PassSongMobx passSong = PassSongMobx();
 final PassNameArtistMobx passNameArtist = PassNameArtistMobx();
 final PassLinkImageMobx passLinkImage = PassLinkImageMobx();
 final StatusMusicMobx statusMusic = StatusMusicMobx();
+
 class MusicPlay extends StatefulWidget{
 	const MusicPlay({Key? key}) : super(key: key);
   @override
@@ -20,6 +26,9 @@ class MusicPlay extends StatefulWidget{
 }
 
 class MusicPlayState extends State<MusicPlay> {
+	
+	// ApiService apiService = ApiService();
+
 	List<Map<String, dynamic>> albumData = AlbumData.data;
 	String song = '';
 	String nameArtist = '';
@@ -49,8 +58,6 @@ class MusicPlayState extends State<MusicPlay> {
 	  }
 
 
-
-
   @override
   Widget build(BuildContext context) {
 		return GestureDetector(
@@ -59,8 +66,6 @@ class MusicPlayState extends State<MusicPlay> {
 			},
 		  child: Align(
 		  	alignment: Alignment.bottomCenter,
-		  		child: Container(
-		  			color: const Color.fromRGBO(26, 26, 26, 1),
 		  	    child: ListTile(
 		  	  	  leading: Observer(
 		  	  	    builder: (context) => Container(
@@ -102,15 +107,38 @@ class MusicPlayState extends State<MusicPlay> {
 		  			  					color: Colors.white,
 		  	  	  					icon: Observer(builder: (context) => Icon(statusMusic.value ? Icons.pause : Icons.play_arrow)),
 		    	  				),
-		  							GestureDetector(
-		  									onTap: (){},
-		  									child: const Icon(Icons.more_vert, color: Colors.white,))
-		  						],
+											PopupMenuButton(
+												onSelected: (value){
+													if(value == 1){
+
+													SongModel songModel = SongModel(
+															nameSong: passSong.value == '' ? song : passSong.value,
+															nameArtis: passNameArtist.value == '' ? nameArtist : passNameArtist.value,
+															linkImage: passLinkImage.value == '' ? linkImage : passLinkImage.value,
+															categoriesId: 1
+															);
+
+//													apiService.createSongModel(songModel);
+
+														Provider.of<ListSongNotifier>(context, listen: false).addListSong(passSong.value == '' ? song : passSong.value,
+														passNameArtist == '' ? nameArtist : passNameArtist.value,
+														passLinkImage == '' ? linkImage : passLinkImage.value);
+//													Provider.of<ListSongNotififier>(context, listen: false).addList(ModelSong(nameSong: widget.song, nameArtist: widget.nameArtist, linkImage: widget.linkImage));
+													}else{
+														Provider.of<ListSongNotifier>(context, listen: false).deleteSong(song);
+													}
+												},
+												icon: const Icon(Icons.more_vert),
+												itemBuilder: (context) => [
+													const PopupMenuItem(child: Text("Add Song"), value: 1,),
+													const PopupMenuItem(child: Text("Like Song"),value: 2),
+												] 
+											)
+										],
 		    	  		),
 		  			)
-		  		),
-		  )
-	),
+					).frosted(frostColor: Colors.black, blur: 9, frostOpacity: .5)
+				),
 		);
   }
 }

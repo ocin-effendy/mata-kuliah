@@ -42,6 +42,15 @@ dependencies:
   mobx_codegen: ^2.0.6
   build_runner: ^2.1.10
   audioplayers: ^0.20.1
+  firebase_core: ^1.12.0
+  firebase_auth: ^3.3.7
+  google_sign_in: ^5.3.2
+  firebase_messaging:
+  flutter_local_notifications: ^9.5.3+1
+  provider: ^6.0.3
+  dio: ^4.0.6
+  http: ^0.13.4
+
 
 dev_dependencies:
   flutter_test:
@@ -76,11 +85,16 @@ flutter:
   - assets/21Savage.jpg
   - assets/Bazzi.jpg
   - assets/Trafis.jpg
+  - assets/One Direction.jpg
+  - assets/Sam Wills.jpg
   - assets/Drake.jpeg
   - assets/Eminem.jpeg
   - assets/TheWeekend.jpeg
+  - assets/Nicky Youre, Dazy.jpeg
+  - assets/Keisya Levronka.jpeg
   - assets/YNW Melly.png
   - assets/Glass animals.png
+  - assets/Harry Style.png
   - assets/recent1.jpeg
   - assets/recent2.jpeg
   - assets/recent3.jpeg
@@ -97,6 +111,11 @@ flutter:
   - assets/Heat Waves.mp3
   - assets/Suicidal Remix.mp3
   - assets/SWIM.mp3
+  - assets/As it was.mp3
+  - assets/Night Changes.mp3
+  - assets/Sunroof.mp3
+  - assets/Tak Ingin Usai.mp3
+  - assets/Traingazing.mp3
   - data/data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

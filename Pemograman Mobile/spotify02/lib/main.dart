@@ -1,14 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:spotify02/firebase_options.dart';
 import 'package:spotify02/navigations/tabbar.dart';
+import 'package:spotify02/notification_handler.dart';
 import 'package:spotify02/pages/login_page.dart';
-
+import 'package:spotify02/pages/signin.dart';
 
 Future<void> main() async{
 	WidgetsFlutterBinding.ensureInitialized();
-	final pref = await SharedPreferences.getInstance();
-	String name = pref.getString('name').toString();
-	bool check = pref.getString('name') != null;
+	await Firebase.initializeApp(
+			options: DefaultFirebaseOptions.currentPlatform
+	);
+	await initializeNotification();
+	bool check = service.isUserLogged();
+	
   runApp(
 		MaterialApp(
 			debugShowCheckedModeBanner: false,
@@ -17,7 +23,7 @@ Future<void> main() async{
 				scaffoldBackgroundColor: Colors.black,
 				brightness: Brightness.dark,
 				bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-					backgroundColor: Colors.white10,
+					backgroundColor: Colors.black,
 					type: BottomNavigationBarType.fixed,
 					selectedLabelStyle: TextStyle( fontSize: 12),
 					unselectedLabelStyle: TextStyle(fontSize: 12),
@@ -25,7 +31,7 @@ Future<void> main() async{
 					unselectedItemColor: Colors.white38
 				)
 			),
-			home: check ? Tabbar(name: name) : const Login(),
+			home: check ? Tabbar(name: "niikooe") : const Login(),
 		)
 	);
 }

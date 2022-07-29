@@ -1,17 +1,24 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spotify02/pages/musicplay_page.dart';
 import 'package:spotify02/widget/cardartist.dart';
 import 'package:spotify02/widget/cardlist.dart';
 import 'package:spotify02/widget/mfy.dart';
 import 'package:spotify02/widget/musicplay.dart';
 import 'package:spotify02/widget/recentplayed.dart';
+import 'package:spotify02/notification_handler.dart';
 
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatefulWidget{
   const HomePage({Key? key, required this.name}) : super(key: key);
 	final String name;
 
-	
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
 	@override
 	Widget build(BuildContext context){
 		return Scaffold(
@@ -58,7 +65,7 @@ class HomePage extends StatelessWidget{
 															const Padding(padding: EdgeInsets.only(bottom: 5)),
 															SizedBox(
 																width: MediaQuery.of(context).size.width - 60,
-															  child: Text('Hello '+ name,
+															  child: Text('Hello '+ widget.name,
 															  	style: GoogleFonts.poppins(
 															  		fontWeight: FontWeight.w500,
 															  		color: Colors.white,

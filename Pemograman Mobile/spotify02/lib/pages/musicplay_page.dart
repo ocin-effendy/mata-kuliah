@@ -178,14 +178,14 @@ class _MusicPlayPageState extends State<MusicPlayPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(Icons.screen_share_outlined),
+                                const Icon(Icons.screen_share_outlined),
                                 Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       IconButton(
                                           iconSize: 40,
                                           onPressed: () {},
-                                          icon: Icon(Icons.skip_previous)),
+                                          icon: const Icon(Icons.skip_previous)),
                                       Container(
                                         decoration: BoxDecoration(
                                             shape: BoxShape.circle,
@@ -213,20 +213,20 @@ class _MusicPlayPageState extends State<MusicPlayPage> {
                                           onPressed: () {
                                           },
                                           iconSize: 40,
-                                          icon: Icon(Icons.skip_next)),
+                                          icon: const Icon(Icons.skip_next)),
                                     ]),
-                                Icon(Icons.cached_outlined)
+                                const Icon(Icons.cached_outlined)
                               ],
                             ),
                             const SizedBox(height: 20),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.devices,
                                   size: 15,
                                 ),
-                                SizedBox(width: 6),
+                                const SizedBox(width: 6),
                                 Text(
                                   'DEVICES AVAILABLE',
                                   style: GoogleFonts.poppins(fontSize: 10),
