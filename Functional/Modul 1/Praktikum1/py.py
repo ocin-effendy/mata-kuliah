@@ -20,25 +20,6 @@ books = [
     }
 ]
 
-# Login Regist menu
-def menu():
-    loop = True
-    while loop: 
-        subprocess.call('reset')
-        print("============ Perpustakaan Umum ============")
-        print("1. Login")
-        print("2. Register")
-        print("3. Exit")
-        value = int(input("Select : "))
-        if value == 1:
-            loginPage()
-        elif value == 2:
-            registerPage()
-        elif value == 3:
-            loop = False
-        else:
-           messageError("Wrong Input") 
-
 
 # validation data input user
 def validationData(username, password):
@@ -156,4 +137,24 @@ def addBook():
     books.append(dict(title=title, author=author, status=False))
     print("Books Add Successfully")
 
-menu()
+
+
+# Login Regist menu
+loop = True
+while loop: 
+    subprocess.call('reset')
+    print("============ Perpustakaan Umum ============")
+    print("1. Login")
+    print("2. Register")
+    print("3. Exit")
+    value = int(input("Select : "))
+    if value == 1:
+        loginPage()
+    elif value == 2:
+        registerPage()
+    elif value == 3:
+        loop = False
+    else:
+        messageError("Wrong Input") 
+
+
