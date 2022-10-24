@@ -28,7 +28,7 @@ def validationData(username, password):
             return True
 
 # Message error
-def messageError(message):
+def message(message):
     print(message)
     input("enter")
 
@@ -43,7 +43,7 @@ def loginPage():
     elif validationData(username, password):
         menuUser()
     else:
-        messageError("User not found")
+        message("User not found")
   
 
 # Register Page
@@ -53,7 +53,7 @@ def registerPage():
     username = input("Username : ")
     password = getpass.getpass("password : ")
     if validationData(username, password):
-        messageError("user already exists!")
+        message("user already exists!")
     else:
         user.append(list((username, password)))
 
@@ -66,7 +66,8 @@ def menuUser():
         print("=========== Menu User ===========")
         print("1. List Books")
         print("2. Borrow a book")
-        print("3. Log out")
+        print("3. Return a book")
+        print("4. Log out")
         value = int(input("Select: "))
         if value == 1:
             printBooks()
@@ -74,9 +75,11 @@ def menuUser():
         elif value == 2:
             borrowTheBook()
         elif value == 3:
+            returnTheBook()
+        elif value == 4:
             loop = False
         else:
-            messageError("Wrong Input")
+            message("Wrong Input")
 
 # Print all books
 def printBooks():
@@ -91,6 +94,15 @@ def printBooks():
             print("Status : unavailable")
         else:
             print("Status : available")
+
+# return the book
+def returnTheBook():
+    name = input("\nName Book : ")
+    for i in books:
+        if i["title"] == name and i["status"]:
+            i["status"] = False
+            message("Book successfully returned")
+            break
 
 
 # Borrow the book
@@ -125,7 +137,7 @@ def menuAdmin():
         elif value == 3:
             loop = False
         else:
-            messageError("Wrong Input")
+            message("Wrong Input")
 
 
 
@@ -155,6 +167,6 @@ while loop:
     elif value == 3:
         loop = False
     else:
-        messageError("Wrong Input") 
+        message("Wrong Input") 
 
 
